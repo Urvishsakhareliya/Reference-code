@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .owl-dot {
+                    cursor: pointer;
+                    cursor: hand;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+
+                .owl-dot {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 16px 18px;
+                    margin: 0 2px;
+                    background: 0 0;
+                    border: 0;
+                    border-radius: 0;
+                    outline: 0;
+                    -webkit-appearance: none;
+                }
+
+                .owl-dot span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 6px;
+                    height: 6px;
+                    background-color: rgba(132, 132, 124, .5);
+                    box-sizing: border-box;
+                    transform: rotate(45deg);
+                    transition: background-color .2s ease-out;
+                }
+ 
+
+                .owl-dot .eltdf-svg-circle {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    fill: none;
+                    stroke: #84847c;
+                    transition: all .8s cubic-bezier(.45, 0, .14, 1.03), stroke 10ms ease-out;
+                    transform: rotate(-135deg);
+                }
+
+                .owl-dot.active .eltdf-svg-circle,
+                .owl-dot:hover .eltdf-svg-circle {
+                    transform: rotate(-45deg) translateZ(0);
+                }
+
+                .owl-dot .eltdf-svg-circle circle {
+                    stroke-dasharray: 160;
+                    stroke-dashoffset: 160;
+                    stroke-width: 1;
+                    transition: all .8s cubic-bezier(.45, 0, .14, 1.03);
+                }
+
+                .owl-dot.active .eltdf-svg-circle circle,
+                .owl-dot:hover .eltdf-svg-circle circle {
+                    stroke-dashoffset: 10;
+                }
+    </style>
+</head>
+<body>
+    
+
+    <button role="button" class="owl-dot">
+        <span></span>
+        <svg class="eltdf-svg-circle">
+            <circle cx="50%" cy="50%" r="45%"></circle>
+        </svg>
+    </button>
+</body>
+</html>
